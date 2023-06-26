@@ -5,6 +5,19 @@
     justify-content: center;
 }
 
+.side-hero {
+    flex-grow: 1;
+    position: relative;
+    width: 60vw;
+    min-width: 345px;
+    height: 100vh;
+    background: url(./Images/rohit-tandon-9wg5jCEPBsw-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 
 body{
     display: flex;
