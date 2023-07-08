@@ -56,12 +56,42 @@ html, body {
     align-items: start;
     flex-grow: 2;
     padding: 10px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
 }
 
 
+.header p{
+    font-weight:bold;
+    color: rgb(55, 55, 55);
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.input-section{
+    font-weight:bold;
+    color: rgb(55, 55, 55);
+    font-size: 20px;
+}
+
+.input-section p{
+    padding:10px 30px;
+}
+.form{
+    background-color: #dddada;
+    max-width:fit-content
+}
 
 
+button{
+    background-color: rgb(69, 104, 69);
+    border: None;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px 50px;
+    color:white;
+    font-weight: bold;
+    margin:10px 30px;
+}
 
 
 
