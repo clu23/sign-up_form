@@ -74,13 +74,22 @@ html, body {
 }
 
 .input-section p{
-    padding:10px 30px;
-}
-.form{
-    background-color: #dddada;
-    max-width:fit-content
+    padding:10px 0px;
 }
 
+.form{
+    background-color: #dddada;
+    padding: 10px 30px;
+}
+
+.form div{
+    padding:5px;
+}
+
+label{
+    color:rgb(55, 55, 55);
+    font-size: 16px;
+}
 
 button{
     background-color: rgb(69, 104, 69);
