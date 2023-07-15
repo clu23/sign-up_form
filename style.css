@@ -147,7 +147,11 @@ button{
     margin-bottom: 30px;
 }
 
-
+.submit-section a {
+    color: rgb(69, 104, 69);
+    font-weight: bold;
+    text-decoration: none;
+  }
 
 .logo{
     color: #F9FAF8;
