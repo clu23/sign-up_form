@@ -147,6 +147,10 @@ button{
     margin-bottom: 30px;
 }
 
+button:hover {
+    background-color: rgb(43, 66, 43);
+  }
+
 .submit-section a {
     color: rgb(69, 104, 69);
     font-weight: bold;
@@ -180,6 +184,26 @@ button{
     flex-direction: column;
 }
 
+input:focus {
+    border: none;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+    outline: none;
+  }
+  
+input:invalid:focus {
+    border: 2px solid rgb(255, 69, 100)
+}
+  
+input:focus:valid {
+    border: rgb(0, 183, 255) 2px solid;
+}
+
+.error {
+    font-family: sans-serif;
+    font-size: .7rem;
+    color: rgb(255, 69, 100);
+    position: absolute;
+  }
 
 
 

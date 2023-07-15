@@ -70,7 +70,96 @@
       </div>
     </div>
     <script>
-      
+      const pwd = document.querySelector('#password');
+      const pwdC = document.querySelector('#confirm_password');
+      const firstname = document.querySelector('#first_name');
+      const lastname = document.querySelector('#last_name');
+      const email = document.querySelector('#email');
+      const tel = document.querySelector('#phone_number');
+      const pwdError = document.querySelector('#password-error');
+      const pwdCError = document.querySelector('#passwordC-error');
+      const firstnameError = document.querySelector('#first-name-error');
+      const lastnameError = document.querySelector('#last-name-error');
+      const emailError = document.querySelector('#email-error');
+      const telError = document.querySelector('#tel-error');
+
+      firstname.addEventListener("input", function (event) {
+        if (firstname.value === '') {
+          firstnameError.textContent = 'Please type in your first name.';
+        } 
+        else {
+          firstnameError.textContent = '';
+        }
+      });
+
+      lastname.addEventListener("input", function (event) {
+        if (lastname.value === '') {
+          lastnameError.textContent = 'Please type in your last name';
+        } else {
+          lastnameError.textContent = '';
+        }
+      }); 
+
+      email.addEventListener("input", function (event) {
+        if (email.validity.typeMismatch) {
+          emailError.textContent = 'Please enter in a valid Email. ex(johnSmith@email.com)';
+        } else {
+          emailError.textContent = '';
+        }
+      }); 
+
+      tel.addEventListener("input", function (event) {
+        if (tel.validity.patternMismatch) {
+          telError.textContent = 'Please enter in a 10 digit phone number';
+        } else {
+          telError.textContent = '';
+        }     
+      }); 
+
+      pwd.addEventListener("input", function (event) {
+        if (pwd.validity.patternMismatch){
+          const currentValue = pwd.value;
+          const regExpCap = /[A-Z]/g;
+          const regExpDig = /[0-9]/g;
+          let result = '';
+          if (regExpCap.test(currentValue)){
+            result += '';
+          } else {
+            result += `Missing at least 1 capital letter. `;
+            result += '\n';
+          }
+        
+        
+          if (regExpDig.test(currentValue)){
+            result += '';
+          } else {
+            result += 'Missing at least 1 number. ';
+            result += '\n';
+          }
+        
+          if (currentValue.length < 9){
+            result += 'Password must be at least 8 characters. '
+            result += '\n';
+          } else {
+            result += '';
+          }
+
+          console.log(result);
+          pwdError.textContent = result;
+
+  
+        } else {
+          pwdError.textContent = '';
+        }
+      });
+  
+      pwdC.addEventListener("input", function (event) {
+        if (pwdC.value !== pw.value) {
+          pwdCError.textContent = 'Passwords do not match';
+        } else {
+          pwdCError.textContent = '';
+        }
+      }); 
     </script>
     
   </body>
